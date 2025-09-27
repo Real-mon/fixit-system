@@ -1,8 +1,7 @@
 # fixit-system
-System name: FixIT: Tech Solutions
-Description: 
+FixIT is a web application designed to provide affordable and accessible general tech support.
 
-Developers:
-    1. Justin Alain B. Monreal
-    2. 
-    3. 
+### Developers:
+    - Justin Alain B. Monreal
+    - 
+    - 
