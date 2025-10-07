@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Confirmation</title>
+
+    <link rel="stylesheet" href="{% static 'accounts/logout.css' %}">
+</head>
+<body>
+
+    <button id="logoutButton" class="logout-btn">
+        LOGOUT
+    </button>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to logout?</p>
+            <div class="modal-actions">
+                <button id="yesButton" class="action-btn yes">Yes</button>
+                <button id="noButton" class="action-btn no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Get references to the HTML elements
+        const logoutButton = document.getElementById('logoutButton');
+        const confirmationModal = document.getElementById('confirmationModal');
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+
+        // 2. Function to show the modal (changes CSS 'display' from none to 'flex')
+        function showModal() {
+            confirmationModal.style.display = 'flex';
+        }
+
+        // 3. Function to hide the modal (stay on current page)
+        function hideModal() {
+            confirmationModal.style.display = 'none';
+        }
+
+        // 4. Function to handle "Yes" click (redirects to the logout endpoint)
+        function handleYes() {
+            // NOTE: Replace '/logout-confirm/' with your actual Django logout URL
+            console.log("Redirecting to Django logout endpoint...");
+            window.location.href = '/password_reset/'; // !!! EDIT THIS WHEN LOG IN PAGE IS DONE TO REDIRECT TO LOGIN
+
+            // If you need to test without a Django server, uncomment the line below:
+            // alert("Redirecting to login page...");
+        }
+
+        // 5. Attach event listeners
+        logoutButton.addEventListener('click', showModal); // Click LOGOUT -> Show box
+        noButton.addEventListener('click', hideModal);      // Click NO -> Hide box (stay)
+        yesButton.addEventListener('click', handleYes);      // Click YES -> Redirect
+    </script>
+
+</body>
+</html>

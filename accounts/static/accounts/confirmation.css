@@ -1,0 +1,69 @@
+/* --- Basic Setup --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0fdf4; /* Very light green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* --- Container Styling --- */
+.confirmation-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #dcfce7; /* Light green border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+/* --- Success Icon --- */
+.icon-success {
+    font-size: 50px;
+    color: #10b981; /* Primary success green */
+    line-height: 1;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding: 10px;
+    border: 3px solid #10b981;
+    border-radius: 50%;
+}
+
+/* --- Typography --- */
+.confirmation-container h2 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: #10b981; /* Success green heading */
+    font-size: 28px;
+}
+
+.message {
+    margin-bottom: 30px;
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* --- Button Styling (Link to Login) --- */
+.login-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: #10b981; /* Success green button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.login-button:hover {
+    background-color: #059669;
+    transform: translateY(-1px);
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixIT Support Portal - Settings</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-blue': '#007bff',
+                        'soft-blue': '#e6f3ff',
+                        'dark-gray': '#1e293b',
+                        'light-gray': '#f4f4f9',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for the active tab indicator and toggle switches */
+        .sidebar {
+            width: 280px;
+            /* Ensures smooth transition if a menu is hidden/shown */
+            transition: all 0.3s ease;
+        }
+
+        .active-link {
+            background-color: #e6f3ff; /* soft-blue */
+            color: #007bff; /* primary-blue */
+            font-weight: 600;
+            border-left: 4px solid #007bff;
+            padding-left: 28px !important; /* Adjust padding to account for border */
+        }
+
+        /* Styling for the custom toggle switch */
+        .toggle-switch-bg {
+            transition: background-color 0.4s;
+        }
+
+        .toggle-switch-dot {
+            transition: transform 0.4s;
+        }
+    </style>
+</head>
+<body class="bg-light-gray font-sans min-h-screen flex text-gray-800">
+
+    <!-- 1. SIDEBAR NAVIGATION -->
+    <aside class="sidebar bg-white shadow-xl shadow-gray-100 flex flex-col pt-6 pb-4">
+        <div class="px-6 mb-10">
+            <div class="flex items-center space-x-3">
+                <!-- Mock Logo/Icon -->
+                <div class="h-8 w-8 bg-primary-blue rounded-lg flex items-center justify-center font-bold text-white text-lg">F</div>
+                <div class="text-xl font-bold text-dark-gray">FixIT</div>
+            </div>
+            <p class="text-xs text-gray-500 mt-1 ml-1">Support Portal</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex-grow">
+            <a href="#" class="flex items-center p-3 text-gray-600 hover:bg-soft-blue hover:text-primary-blue transition-colors duration-200 pl-8 rounded-tr-lg rounded-br-lg">
+                <!-- Home Icon -->
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-10v10a1 1 0 001 1h3m-10-9v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6"></path></svg>
+                Home
+            </a>
+            <a href="#" class="flex items-center p-3 text-gray-600 hover:bg-soft-blue hover:text-primary-blue transition-colors duration-200 pl-8 rounded-tr-lg rounded-br-lg">
+                <!-- My Tickets Icon -->
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 002 2h4a2 2 0 002-2V7a2 2 0 00-2-2H5zM5 13a2 2 0 00-2 2v3a2 2 0 002 2h4a2 2 0 002-2v-3a2 2 0 00-2-2H5z"></path></svg>
+                My Tickets
+            </a>
+            <a href="#" class="flex items-center p-3 text-gray-600 hover:bg-soft-blue hover:text-primary-blue transition-colors duration-200 pl-8 rounded-tr-lg rounded-br-lg">
+                <!-- Messages Icon -->
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.545A9.825 9.825 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Messages
+            </a>
+            <a href="#" class="active-link flex items-center p-3 transition-colors duration-200">
+                <!-- Settings Icon -->
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.82 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.82 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.82-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.82-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                Settings
+            </a>
+        </nav>
+    </aside>
+
+    <!-- 2. MAIN CONTENT AREA -->
+    <main class="flex-1 flex flex-col overflow-y-auto">
+        <!-- HEADER / TOP BAR -->
+        <header class="bg-white p-5 shadow-sm flex justify-between items-center sticky top-0 z-10">
+            <h1 class="text-2xl font-semibold text-dark-gray">Settings</h1>
+            <div class="flex items-center space-x-4">
+                <!-- Notification/Support Icon -->
+                <div class="relative">
+                    <svg class="w-6 h-6 text-gray-500 hover:text-dark-gray cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 100 2 1 1 0 000-2zm0 6a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+                    <span class="absolute top-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white bg-red-500"></span>
+                </div>
+
+                <!-- User Profile -->
+                <div class="flex items-center space-x-3">
+                    <img class="h-10 w-10 rounded-full object-cover" src="https://placehold.co/40x40/4f46e5/ffffff?text=TJ" alt="User Avatar">
+                    <div>
+                        <p class="text-sm font-semibold">Tech Johnson</p>
+                        <p class="text-xs text-gray-500">Senior Technician</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- SETTINGS CONTENT -->
+        <section class="p-8 pb-32">
+            <!-- Tab Navigation -->
+            <div class="flex space-x-4 border-b border-gray-200 mb-8">
+                <button class="py-2 px-4 border-b-2 border-primary-blue text-primary-blue font-semibold">
+                    Account
+                </button>
+                <button class="py-2 px-4 border-b-2 border-transparent text-gray-500 hover:text-dark-gray hover:border-gray-300 transition-colors duration-150">
+                    Profile
+                </button>
+                <button class="py-2 px-4 border-b-2 border-transparent text-gray-500 hover:text-dark-gray hover:border-gray-300 transition-colors duration-150">
+                    Notifications
+                </button>
+            </div>
+
+            <!-- ACCOUNT TAB CONTENT -->
+            <div class="space-y-12">
+                <!-- Account Details Section -->
+                <div class="max-w-4xl">
+                    <h3 class="text-xl font-semibold text-dark-gray">Account</h3>
+                    <p class="text-sm text-gray-500 mb-6">Manage your account details and security settings</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Username Field -->
+                        <div>
+                            <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                            <input type="text" id="username" value="tech.johnson" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue" />
+                        </div>
+                        <!-- Email Field -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" value="tech.johnson@fixit.com" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Password & Security Section -->
+                <div class="max-w-4xl">
+                    <h3 class="text-xl font-semibold text-dark-gray">Password & Security</h3>
+                    <p class="text-sm text-gray-500 mb-6">Update your password</p>
+
+                    <form class="space-y-5 w-full md:w-3/5 lg:w-2/5">
+                        <!-- Current Password -->
+                        <div>
+                            <label for="current_password" class="block text-sm font-medium text-gray-700 mb-1">Current Password</label>
+                            <input type="password" id="current_password" placeholder="••••••••" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue" />
+                        </div>
+                        <!-- New Password -->
+                        <div>
+                            <label for="new_password" class="block text-sm font-medium text-gray-700 mb-1">New Password</label>
+                            <input type="password" id="new_password" placeholder="••••••••" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue" />
+                        </div>
+                        <!-- Confirm New Password -->
+                        <div>
+                            <label for="confirm_password" class="block text-sm font-medium text-gray-700 mb-1">Confirm New Password</label>
+                            <input type="password" id="confirm_password" placeholder="••••••••" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue" />
+                        </div>
+                        <div class="flex justify-end pt-2">
+                             <a href="#" class="text-primary-blue text-sm font-medium hover:underline">Change Password</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Account Recovery Section -->
+                <div class="max-w-4xl">
+                    <h3 class="text-xl font-semibold text-dark-gray">Account Recovery</h3>
+                    <p class="text-sm text-gray-500 mb-6">Set up recovery options to secure your account and regain access if needed.</p>
+
+                    <div class="space-y-4 w-full md:w-3/5 lg:w-2/5">
+                        <!-- Two-Factor Authentication Toggle -->
+                        <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                            <span class="text-base text-gray-700">Two-Factor Authentication</span>
+                            <div class="flex items-center">
+                                <label class="flex items-center cursor-pointer">
+                                    <div class="relative">
+                                        <input type="checkbox" id="2fa-toggle" class="sr-only peer" checked>
+                                        <div class="toggle-switch-bg block bg-primary-blue w-12 h-6 rounded-full"></div>
+                                        <div class="toggle-switch-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform translate-x-6 peer-checked:bg-white peer-checked:translate-x-6"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- SMS Recovery Toggle -->
+                        <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                            <span class="text-base text-gray-700">SMS Recovery</span>
+                            <div class="flex items-center">
+                                <label class="flex items-center cursor-pointer">
+                                    <div class="relative">
+                                        <input type="checkbox" id="sms-toggle" class="sr-only peer" checked>
+                                        <div class="toggle-switch-bg block bg-primary-blue w-12 h-6 rounded-full"></div>
+                                        <div class="toggle-switch-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform translate-x-6 peer-checked:bg-white peer-checked:translate-x-6"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Email Recovery Toggle -->
+                        <div class="flex justify-between items-center py-2">
+                            <span class="text-base text-gray-700">Email Recovery</span>
+                            <div class="flex items-center">
+                                <label class="flex items-center cursor-pointer">
+                                    <div class="relative">
+                                        <input type="checkbox" id="email-toggle" class="sr-only peer" >
+                                        <div class="toggle-switch-bg block bg-gray-300 w-12 h-6 rounded-full peer-checked:bg-primary-blue"></div>
+                                        <div class="toggle-switch-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform peer-checked:translate-x-6"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Fixed Action Button at the Bottom -->
+        <footer class="fixed bottom-0 left-0 right-0 ml-70 p-4 bg-white shadow-lg border-t border-gray-200 flex justify-end">
+            <button class="bg-primary-blue text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200">
+                Save Changes
+            </button>
+        </footer>
+    </main>
+</body>
+</html>

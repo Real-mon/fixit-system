@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Changed!</title>
+    <link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="icon-success">&#10003;</div>
+        <h2>Success!</h2>
+        <p class="message">
+            Your password has been successfully changed.
+            You can now log in to your account with your new credentials.
+        </p>
+
+        <!-- <a href="/admin/login/" class="login-button">
+            Go to Login
+        </a> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* Basic Setup: Centering the content on the screen */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+/* --- 1. Logout Button Styling --- */
+.logout-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #dc3545; /* Red color for logout */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* --- 2. Modal Overlay Styling --- */
+.modal {
+    /* Covers the entire viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+
+    /* CRITICAL: This hides the modal until JavaScript intervenes */
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* --- 3. Modal Content Box Styling --- */
+.modal-content {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    max-width: 350px;
+    width: 90%;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* --- 4. Modal Actions (Buttons) Styling --- */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%;
+}
+
+.action-btn.yes {
+    background-color: #007bff; /* Primary Blue for "Yes" */
+    color: white;
+}
+
+.action-btn.yes:hover {
+    background-color: #0056b3;
+}
+
+.action-btn.no {
+    background-color: #6c757d; /* Secondary Gray for "No" */
+    color: white;
+}
+
+.action-btn.no:hover {
+    background-color: #5a6268;
+}
